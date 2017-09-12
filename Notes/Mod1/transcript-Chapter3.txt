@@ -1,0 +1,405 @@
+Chapter 3 - Introduction to Machine Learning
+
+00:00:04	So in this chapter,
+00:00:06	we will do an overview of the data science process.
+00:00:09	Now here's the module overview.
+00:00:11	We'll start with historical notes on KDD, Knowledge Discovery and Data,
+00:00:16	CRISP-DM, Big Data and Data Science and
+00:00:18	their relationship to Data Mining and Machine Learning.
+00:00:22	In particular, a Data Mining is one step in the knowledge discovery
+00:00:26	process and then I'll go through an example of the knowledge discovery
+00:00:31	process in detail.
+00:00:35	So let us talk about historical notes.
+00:00:41	Now the term Big Data was actually coined by two astronomers,
+00:00:47	Cox and Ellsworth in 1997.
+00:00:50	So, it's actually an old term that got a bit hyped up a few years
+00:00:55	ago after the CCC whitepapers on Big Data came out and I'm showing you
+00:01:01	the CCC Big Data Pipeline from the whitepaper in 2012 and it's nice.
+00:01:06	It's an effort to formalize the scientific process that goes into
+00:01:10	discovering knowledge from data.
+00:01:13	It's not just Data Mining, there’s a lot more to it.
+00:01:17	In fact, Data Mining is the fourth step out of five.
+00:01:23	Major steps in analysis that they did are shown
+00:01:27	in this flow chart at the top here and
+00:01:30	below it is these Big Data needs that make these tasks challenging.
+00:01:35	So let me go through the five steps.
+00:01:37	So first,
+00:01:38	you have to go through the process of actually obtaining the data.
+00:01:42	And perhaps that involves recording how users behave on different
+00:01:46	websites or you have to write a script to collect the data properly,
+00:01:49	whatever it is.
+00:01:51	So that's some software that’s created for that stuff and
+00:01:55	the second stuff is extraction, cleaning and annotation of data
+00:02:00	where you try to reduce the noise a bit and
+00:02:05	get rid of the data that you don't directly need.
+00:02:08	Or if you're working with to the free text, that's easy to annotate,
+00:02:12	then you might be able to turn it into like a structured table.
+00:02:17	And basically,
+00:02:17	at this step, you're turning the data from what's potentially a pile
+00:02:21	of rubbish into something that you might actually be able to work with.
+00:02:27	And at the third step, you’re going to set up the data
+00:02:30	in a way that's directly conducive to data mining.
+00:02:34	And although the text documents haste be linked properly to the other
+00:02:38	structured tables and you have one central database where all of that
+00:02:42	information is put together, then it's stored neatly.
+00:02:46	And then there's the analysis modeling stuff, which people spend
+00:02:49	a lot of time on here and then interpretation of the results.
+00:02:52	How do you get knowledge out of this data?
+00:02:55	What is the interpretation of what your model says?
+00:03:00	That's the Dig Data pipeline and
+00:03:02	now I'm going to show you another separate Big Data pipeline
+00:03:05	constructed by a separate group of people at another time.
+00:03:09	So this is the second group of people trying to formalize
+00:03:12	the discovery of knowledge from data.
+00:03:15	Ready?
+00:03:18	So here it is.
+00:03:20	This is the KDD Process, Knowledge Discovery in Databases Process and
+00:03:26	you will see the steps are data selection, preprocessing of data,
+00:03:31	transformation.
+00:03:33	Does it look familiar?
+00:03:34	It should, because it's the same as on the previous slide.
+00:03:38	It's the same exact steps as on the CCC Big Data process, so
+00:03:42	you're probably not surprised.
+00:03:45	You're saying, so what?
+00:03:45	Two groups came up with the same diagram, but look,
+00:03:49	this diagram is from 1996.
+00:03:51	This is from way before the CCC had Big Data as a twinkling in them
+00:03:55	eyes and the CCC people,
+00:03:56	there's a chance that they didn’t know about the KDD Process,
+00:04:00	this work that was done in 1996, because they didn't cite it.
+00:04:04	So, it's possible they didn’t even know about each other.
+00:04:06	So what it means here is there is potentially something that's very
+00:04:10	fundamental about this process.
+00:04:12	You had two completely separate groups of people construct the same
+00:04:16	knowledge discovery process and
+00:04:18	maybe there's something fundamental here about it.
+00:04:20	Maybe it's like pi or something, some important number like
+00:04:24	the golden ration, something important about the universe.
+00:04:27	The sport of universal process that people separately discover.
+00:04:32	Anyway, so this is the Depress and it seems so abstract,
+00:04:37	but there might be something fundamental about this.
+00:04:42	And by the way, if you read both of these articles,
+00:04:44	they're very inspiring.
+00:04:46	And one thing I want to point out again is that Data Mining is a part
+00:04:50	of this process, it's sort of like the middle of the process.
+00:04:55	It's one part, not all of it and granted.
+00:04:58	It's sort of like the climax of story, but like any story,
+00:05:03	the setup of the story really makes the whole thing work.
+00:05:08	Now KDD wasn't the only game in town before the CCC web papers.
+00:05:13	This s CRISP-DM, so Cross Industry Standard Process for Data Mining.
+00:05:19	Now these guys were really serious about formalizing that knowledge
+00:05:23	discovery process.
+00:05:25	They wrote a 77-page manual on how to do this and I actually like
+00:05:28	CRISP-DM's process the best, because it includes business understanding
+00:05:33	and data understanding, which I think are critical components
+00:05:37	of the process of discovering knowledge from data.
+00:05:40	I also love all the backward arrows on this diagram showing how many
+00:05:44	iterations you end up doing within this process on a regular basis.
+00:05:48	You do a part of it, you realize something's wrong,
+00:05:51	you got to go back and change it.
+00:05:52	Anyway, so this is the process that tend to think of when I think of
+00:05:56	data science, Big Data and the knowledge discovery process.
+00:06:02	So just to summarize.
+00:06:04	The stages of knowledge discovery and
+00:06:06	the datasets process is basically the same no matter who invents or
+00:06:10	reinvents the knowledge discovery data mining big data or
+00:06:13	data science process, you may not always need all of these stages.
+00:06:17	Data science Ison iterative process.
+00:06:21	There are backward arrows on most of these process diagrams,
+00:06:23	which indicate that you may need to go back and
+00:06:26	redo parts of the process over and over again until you
+00:06:29	really get what you're looking for out of these data.
+00:06:33	So now, I'm going to go through an example of the knowledge discovery
+00:06:37	process in detail and go through a case study.
+00:06:40	So in particular, I'm going to talk to you about the process of
+00:06:44	predicting power failures in Manhattan, which is a problem that
+00:06:49	I've been interested in and involved in for a several years.
+00:06:54	So here's some motivation for the case study.
+00:06:57	In New York City, the peak demand for electricity is rising.
+00:07:01	New York City hit peak demand twice in the last few years.
+00:07:07	Now the infrastructure in New York City dates back to the 1880s from
+00:07:11	the time of Thomas Edison and power failures occur fairly often,
+00:07:15	enough that we can actually do statistics on when these failures
+00:07:19	occur and they’re somewhat expensive.
+00:07:22	They can be expensive to repair.
+00:07:24	So what we'd like to do is determine how to prioritize manhole
+00:07:28	inspections in order to reduce the number of manhole events,
+00:07:32	like fires and explosions and smoking manholes and
+00:07:36	other types of outages that might happen in the future.
+00:07:39	Now this is a real problem.
+00:07:41	This is an honest to goodness real data science discovery problem.
+00:07:46	So none of what I'm telling you here is made up,
+00:07:49	it's all completely real.
+00:07:52	So let's talk about the stages in the knowledge discovery process
+00:07:56	again, we'll just review those.
+00:07:58	So first, opportunity assessment and business understanding.
+00:08:03	Data Understanding and Data Acquisition.
+00:08:06	Data cleaning and Transformation.
+00:08:08	Model Building.
+00:08:08	Policy Construction.
+00:08:10	Evaluation, Residuals and Metrics and Model Deployment, Monitoring and
+00:08:14	and Model Updates.
+00:08:15	So these are essentially taken from the CRISP-DM process,
+00:08:18	because they include the opportunity assessment and
+00:08:21	the business understanding and the model deployment.
+00:08:24	Those two steps are not in some of the other processes, so
+00:08:26	I like to keep those in there.
+00:08:28	So let's go to the next slide and
+00:08:30	walk you through what these what these stages are.
+00:08:34	So again, if you want to see the 77-page description,
+00:08:39	you can go read the CRISP-DM manual.
+00:08:43	So, Opportunity Assessment and Business Understanding.
+00:08:47	So this is what problem are you trying to solve?
+00:08:50	What do you really want to accomplish and what are the constraints?
+00:08:53	What are the risks?
+00:08:54	How are you going to evaluate the quality of the results?
+00:08:58	If you don't know how you’re going to evaluate
+00:08:59	the quality of the results, don’t even start, don't even bother.
+00:09:03	You need that, that particular thing is important and
+00:09:06	you should decide it before you start.
+00:09:09	And so for predicting manhole events,
+00:09:13	the general goal was to predict that they told us.
+00:09:18	They said, okay, let’s predict manhole fires and
+00:09:20	explosions before they occur.
+00:09:22	But this is not a precise definition,
+00:09:24	because what do you mean predict it?
+00:09:27	How far in advance do you want them predicted?
+00:09:28	How do you define what Isa manhole fire or an explosion?
+00:09:33	All we have is text records; how can we tell which ones were fires and
+00:09:37	explosions or
+00:09:38	smoking manholes and so what we had to do was make it more precise.
+00:09:42	If we predicted a manhole fire would occur the day before it occurs,
+00:09:45	that's not very useful.
+00:09:48	So here are our two goals.
+00:09:50	The first one is to asses predictive accuracy for
+00:09:54	predicting manhole events in the year before they happen.
+00:09:58	So that gives the power company a year for their decision process.
+00:10:03	And the second goal was to create a cost benefit analysis for
+00:10:09	inspection policies that takes into account the cost of
+00:10:14	doing inspections and also the cost of a manhole fire.
+00:10:19	The fire itself would take to repair but
+00:10:22	also other types of costs that are involved with these types of events.
+00:10:28	We also want to then determine how often manholes needed to be
+00:10:32	inspected that's our policy, that’s our prescriptive analytics.
+00:10:38	So these goals are concrete, we can actually form concrete assessments
+00:10:41	of how well we did with our tasks.
+00:10:47	For data understanding and data acquisition,
+00:10:50	here is our collection of data.
+00:10:53	We had trouble tickets which are free text documents typed by
+00:10:57	dispatchers documenting problems on the electrical grid.
+00:11:00	So these are people behind the desk at the power company.
+00:11:04	And they're waiting for calls to come in and
+00:11:06	then when a call comes in they figure out what to do about it and
+00:11:09	they're actually typing while they’re directing the action
+00:11:12	of what the company isogonal do about the problem.
+00:11:16	So we had all these free text documents, we also had records of
+00:11:19	information about manholes where the manholes were located,
+00:11:23	what types of manholes they were were they manholes or service boxes.
+00:11:27	We also had records of information about underground cables.
+00:11:31	Now these data were incredibly
+00:11:34	difficult to work with because if you take the cable data and you try
+00:11:37	to figure out which electrical cables go into which manholes.
+00:11:41	Just trying to figure that out just to try to do that matching,
+00:11:44	you 'd lose half the cable records.
+00:11:46	So there was a lot of cleaning and
+00:11:48	data integration that went into working with those cable records.
+00:11:52	We also had electrical shock information tables,
+00:11:55	we had extra information about serious manhole events.
+00:11:59	And then we had inspection reports from the inspections program that
+00:12:03	the power company was doing.
+00:12:06	And then we knew which manholes were vented and which ones were solid.
+00:12:10	And the vented ones of course, would allow gases to escape.
+00:12:14	So that those manholes were potentially less likely to have
+00:12:18	an explosion where the cover would come off.
+00:12:22	Now, I just want to mention
+00:12:28	that this is a very large amount of data that's
+00:12:32	very disparate and potentially very difficult to work with.
+00:12:37	So I just want to mention that big data characterized by at
+00:12:41	least four Vs.
+00:12:42	I think probably five or six Vs, but
+00:12:45	two of those Vs are variety and veracity.
+00:12:49	So variety means a variety of different data sources contribute
+00:12:53	and veracity means that well, not all of these data sources
+00:12:56	are equally trustworthy and you have to figure out when you're solving
+00:12:59	these data science problems which data sources you can trust.
+00:13:02	So here's a collection of these data sources,
+00:13:07	some of them are not that trustworthy so that gives you
+00:13:11	an example of these two challenges in the big data process.
+00:13:17	So how do you know what data to trust?
+00:13:18	So getting back to the veracity.
+00:13:20	And the answer is you don't.
+00:13:22	Over half of our cable data was useless and
+00:13:24	we didn't know which half.
+00:13:27	So this ties back into the evaluation process.
+00:13:29	If you don't know which data to trust,
+00:13:31	how are you going to evaluate the quality of the results?
+00:13:35	And these are the kind of problems we were stuck on.
+00:13:37	It wasn't the machine learning that was the hard part here.
+00:13:40	And most of the time machine learning really isn't the hard part.
+00:13:44	But if you're taking this class,
+00:13:46	probably machine learning Isa little bit intimidating but
+00:13:49	that's not the part that you should be intimidated by.
+00:13:52	And hopefully this class will at least help you with the machine
+00:13:56	learning part.
+00:13:59	Data cleaning and transformation.
+00:14:02	As I mentioned, sometimes this is 99% of the work.
+00:14:05	If you want better results,
+00:14:07	it's not necessarily getting better machine learning algorithm.
+00:14:10	You might want to clean the data some more.
+00:14:15	So for instance,
+00:14:16	this includes turning free text into structured information.
+00:14:20	So for instance, our trouble tickets would be turned into a vector.
+00:14:24	So a vector is a set of numbers.
+00:14:26	So we would turn each trouble ticket into a vector like,
+00:14:30	does this ticket represent a serious event or a less serious event or
+00:14:34	does it not represent an event?
+00:14:36	What was the year that the trouble ticket was entered?
+00:14:41	What was the month, what waste day, what were the names of
+00:14:45	the manholes that were involved and so on and so forth?
+00:14:49	And then from there, you take all of these data and
+00:14:51	you try to integrate them.
+00:14:53	And what that means is that you try to create unique identifiers
+00:14:56	that will help you link pieces of data from different tables together.
+00:15:01	So here as I mentioned, if you take the manhole data and
+00:15:04	you join it to the cable data,
+00:15:05	you're going to lose half of the cable records because there
+00:15:10	was no unique identifier to identify which cable goes into which manhole.
+00:15:14	So that's something we had to create.
+00:15:20	I want to think of the knowledge discovery process as a sort
+00:15:24	of like alchemy.
+00:15:26	Alchemy is where you try to turn lead into gold.
+00:15:29	Except that alchemy doesn't work but data often does.
+00:15:34	Business understanding is like am Ideally going to get gold out of this?
+00:15:39	And what constitutes gold here?
+00:15:42	And data understanding is like what are my raw materials that I'm going to
+00:15:47	collect?
+00:15:49	And data preparations an important step.
+00:15:52	Like that's where you purify all the raw ingredients and
+00:15:56	you get rid of all the junk and contaminants.
+00:16:00	And then modeling is where you actually do the transformation
+00:16:04	of the raw ingredients into gold.
+00:16:07	And that's why people are obsessed with it.
+00:16:08	That's why people think it's magic.
+00:16:10	But really as long as you did the processing right,
+00:16:13	this step is generally pretty easy and it does work like magic.
+00:16:18	But you'll see it’s definitely not magic.
+00:16:21	Now evaluation is where the appraiser comes and
+00:16:24	tells you how much the gold is worth.
+00:16:26	And of course,
+00:16:27	deployment is where the whole village comes to buy your gold.
+00:16:31	So back to the modeling step.
+00:16:35	Now, a predictive doesn’t necessarily mean
+00:16:39	predictive in the future time wise.
+00:16:42	It can mean prediction of a new circumstance that you simply
+00:16:46	haven't seen before.
+00:16:48	So predictive model building is usually just predictive modeling
+00:16:52	meaning machine learning or statistical modeling.
+00:16:55	Now, if you want to answer a yes or
+00:16:57	no question, this is a classification problem.
+00:17:00	So for manholes will the manhole explode yes next year?
+00:17:04	Yes or no, that's a yes or no question.
+00:17:06	That's a classification problem.
+00:17:08	If you want to predict numerical value,
+00:17:11	it is then a regression problem.
+00:17:15	So for instance,
+00:17:15	if you want to predict what is the temperature going to be tomorrow?
+00:17:21	This is regression.
+00:17:24	If you want to group observations into similar looking groups that's
+00:17:27	clustering.
+00:17:29	If you want to recommend someone an item like a book or a movie or
+00:17:33	some other kind of product based on ratings data from other customers
+00:17:38	this is a recommender’s system.
+00:17:40	And I want to point out that there are many,
+00:17:42	many other machine learning problems but
+00:17:44	what we're covering are sort of the core problems in machine learning.
+00:17:52	Policy Construction.
+00:17:54	How will your model be used to change policy?
+00:17:58	So for instance for manholes, how should we as data scientists
+00:18:03	recommend changing the inspection policy for
+00:18:06	manholes based on our predictive models?
+00:18:09	Here's another example, consider using social media and
+00:18:13	customer purchase data to determine customer
+00:18:16	participation if Starbucks moves into a new city.
+00:18:21	So once the model's created, how do you optimize where the shops
+00:18:24	should be located where the new Starbucks should be located?
+00:18:27	How big should these shops be and where are the warehouses?
+00:18:32	Where the warehouses should be located?
+00:18:34	So there's a big optimization problem in there.
+00:18:35	If you know how much people are going to participate and
+00:18:38	go to the new Starbucks.
+00:18:40	If it's there,
+00:18:41	how do you optimize where the Starbucks should be located?
+00:18:44	Where the warehouses should be?
+00:18:46	And that's a big optimization problem and
+00:18:48	that comes after the predictive modeling.
+00:18:51	So model building is predictive, policy construction is prescriptive.
+00:18:59	Evaluation, how do you measure the quality of the result?
+00:19:04	Evaluation can be very difficult if the data do not provide
+00:19:08	ground truth.
+00:19:10	So for instance for
+00:19:12	manhole events, we had something resembling ground truth.
+00:19:16	We had the engineers at Con Edison which is the power company in
+00:19:20	New York, we had them withhold high quality recent data
+00:19:25	about events that they sort of manually constructed themselves.
+00:19:29	They sort of figured out which events actually happened.
+00:19:32	And then they conducted a blind test on our predictive models so that
+00:19:38	they could determine for themselves what is the quality of this result.
+00:19:44	So that helped us really ensure that our evaluation was high quality and
+00:19:48	that our model building was high quality.
+00:19:52	Deployment, getting a working proof of concept deployed
+00:19:57	stops 95% of projects.
+00:20:00	It's like heir turned lead into gold,
+00:20:03	and the reaction is sort of, well that's nice.
+00:20:08	This is the most frustrating part of data science is that you do all this
+00:20:12	work to discover this knowledge from data, you come up with a policy and
+00:20:16	then people don't want to use it.
+00:20:18	And the problem is the goals might change.
+00:20:22	The data itself might change. The data might change as a reaction
+00:20:26	to the new policy.
+00:20:27	Maybe what happened while you were doing all this,
+00:20:31	maybe it takes several months to dot and then the people who asked you
+00:20:36	to solve the problem in the first place no longer need the model or
+00:20:40	they lost interest and they moved on to something else.
+00:20:44	So this is a major problem and so
+00:20:46	I would definitely puta recommendation out there.
+00:20:50	That if you're going to go through all the trouble to construct these
+00:20:53	policies that hopefully, that there's some sort of guarantee,
+00:20:57	even a pretty decent guarantee not a 100% guarantee but
+00:21:00	a good guarantee that it’s actually going to be deployed.
+00:21:04	Don't bother doing the projecting the first place if no
+00:21:07	one plans to deploy it.
+00:21:09	With the exception, unless it's fun.
+00:21:11	That's the little star at the bottom.
+00:21:14	But you want to keep realistic timeline in mind.
+00:21:16	So if I take too long to do this then,
+00:21:21	are they still going to be interested in deploying it?
+00:21:23	And then you got your realistic timeline and then add several months to
+00:21:26	it because depending on the quality of the data,
+00:21:28	you might need that several months.
+00:21:31	Now, you should keep in mind that while the model is deployed,
+00:21:35	it will need to be updated and improved.
+00:21:37	You should as the data scientist,
+00:21:39	you should be retained after it's deployed.
+00:21:44	So for instance maybe you observe something that you didn't expect
+00:21:47	after it was deployed and you need to build that back into the model.
+00:21:50	So that's something that you would need
+00:21:55	to continue to work on the project for.
+00:22:00	So that was all the stages in the data science process with
+00:22:04	an example.
+00:22:06	I also want to make clear point here.
+00:22:08	Knowledge discovery Ison iterative process.
+00:22:11	You do something, you look at the result,
+00:22:13	you evaluate it then that tells you what you need to fix.
+00:22:17	So you go back to an earlier step, you fix it then you can
+00:22:20	continue sort of this loop of continually trying
+00:22:24	to improve this data science process until you get to where you want to go.
+00:22:29	Just to summarize, we’ve made several attempts.
+00:22:34	Sorry, there have been several attempts to make the process
+00:22:38	of discovering knowledge scientific.
+00:22:40	I went through the KDD pipeline, the CRISP-DM pipeline,
+00:22:45	the CCC Big Data Pipeline, and all of them have very mysteriously
+00:22:50	similar steps indicating that there’s something fundamental
+00:22:54	about this process of discovering knowledge from data.
+00:22:59	Now data mining is only one of those steps but it is an important one.
+00:23:05	So we're going to be focusing on datamining for the next few lectures.
+00:23:12	Thanks.
